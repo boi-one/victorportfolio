@@ -1,0 +1,377 @@
+@font-face {
+    font-family: decker;
+    src: url("../fonts/DeckerRegular.ttf");
+}
+
+@font-face {
+    font-family: deckerBold;
+    src: url("../fonts/DeckerBold.ttf");
+}
+
+@font-face {
+    font-family: deckerBolder;
+    src: url("../fonts/DeckerBolder.ttf");
+}
+
+@font-face {
+    font-family: deckerLardfull;
+    src: url("../fonts/DeckerLardfull.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --gridsize: calc(100vw / 20);
+}
+
+h1,
+p {
+    color: white;
+    font-family: decker;
+    font-style: italic;
+}
+
+main {
+    text-align: center;
+    width: 60.5vw;
+    margin: 4vw;
+    margin: 0 auto;
+    background-image: linear-gradient(to bottom, #05040b, #1c094e);
+    min-height: 100vh;
+}
+
+html {
+    background-image: linear-gradient(to bottom, #05040b, #1c094e);
+}
+
+body {
+    background-size: var(--gridsize) var(--gridsize);
+    background-image:
+        repeating-linear-gradient(to right, grey 0 1px, transparent 1px var(--gridsize)),
+        repeating-linear-gradient(to bottom, grey 0 1px, transparent 1px var(--gridsize));
+    image-rendering: pixelated;
+    background-position: center;
+}
+
+#victorBar,
+#skillBar,
+#brookerBar,
+#portoBar,
+#XDIEBar,
+#otherBar {
+    position: relative;
+}
+
+#victorBar,
+#brookerBar,
+#portoBar,
+#XDIEBar,
+#otherBar {
+    margin: 0 auto;
+    width: 80%;
+    display: inline-block;
+}
+
+#otherBar {
+    padding-top: 8vh;
+}
+
+#victorBar>img,
+#brookerBar>img,
+#portoBar>img,
+#XDIEBar>img,
+#otherBar>img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.text>.title>p {
+    font-size: 1.7vw;
+}
+
+.text>.title>#name {
+    font-style: normal;
+    font-family: deckerLardfull;
+}
+
+.text>.title>#nameDash {
+    font-family: deckerBolder;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+}
+
+.text>.title>#role {
+    font-family: deckerBolder;
+}
+
+.title {
+    display: flex;
+}
+
+.subtitle {
+    font-family: deckerBolder;
+    font-size: 1.3vw;
+}
+
+.text {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    text-align: left;
+}
+
+boldText {
+    font-family: deckerBolder;
+}
+
+.text>.description {
+    font-size: 0.88vw;
+    margin-right: 5vw;
+}
+
+#victorBar>#victorIcon {
+    position: absolute;
+    top: 2%;
+    left: 1.1%;
+    width: 31%;
+
+    transition: 100ms;
+}
+
+#victorBar>#victorIcon:hover {
+    transition: 100ms;
+    transform: scale(1.02);
+}
+
+#victorBar>#tv {
+    width: 40%;
+    position: absolute;
+    right: -3%;
+    top: 65%;
+}
+
+#skillBar {
+    width: 27vw;
+    margin-top: 4vh;
+    margin-right: 20vw;
+    position: relative;
+    display: inline-block;
+    background-position: center top;
+    background-size: 100%;
+    padding-bottom: 1.6rem;
+}
+
+#skillBar>img {
+    width: 100%;
+    position: absolute;
+    display: block;
+}
+
+#skillsContainer {
+    position: relative;
+}
+
+#skillsbg {
+    padding-top: 3%;
+    padding-right: 20%;
+    width: 45%;
+}
+
+#bigskills {
+    position: relative;
+    display: flex;
+    padding: 2%;
+    padding-bottom: 0;
+}
+
+#bigskills>.skill {
+    position: relative;
+    display: block;
+    margin: 1.5%;
+}
+
+.skill>img {
+    width: 100%;
+    display: block;
+}
+
+.skill>.time {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 2.4vw;
+    font-style: normal;
+    font-family: deckerLardfull;
+}
+
+.skill>.yearsOf {
+    position: absolute;
+    bottom: 24%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: gray;
+    font-size: 1vw;
+    text-wrap: nowrap;
+    font-family: deckerBolder;
+}
+
+.skill>.skillSubtitle {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: gray;
+    font-size: 0.55vw;
+    text-wrap: nowrap;
+    font-family: deckerBolder;
+}
+
+#projects {
+    font-size: 1vw;
+    bottom: 4%;
+}
+
+#psSkill {
+    bottom: -9%;
+}
+
+#software {
+    font-size: 1vw;
+    font-family: deckerBolder;
+    margin-bottom: 0.5rem;
+}
+
+#toolsUsed,
+#engines,
+#code,
+#planning,
+#edit {
+    display: flex;
+}
+
+#toolsUsed {
+    justify-content: center;
+    margin-top: 0;
+}
+
+#toolsUsed>div {
+    margin-left: .5vw;
+    margin-right: .5vw;
+}
+
+#toolsUsed>#engines>img,
+#toolsUsed>#code>img,
+#toolsUsed>#planning>img,
+#toolsUsed>#edit>img {
+    margin-left: 0.1vw;
+    margin-right: 0.1vw;
+    width: 1.75vw;
+}
+
+#brookerJobTitle {
+    font-family: deckerBolder;
+    font-size: 1.7vw;
+    position: absolute;
+    text-align: right;
+    top: 20%;
+    left: 30%;
+    text-shadow: 4px 4px 0 rgba(56, 0, 132, 1);
+}
+
+#brookerBar>#characterIcon {
+    width: 39%;
+    position: absolute;
+    bottom: 21%;
+    left: 67.5%;
+}
+
+#brookerBar>#brookerTitle {
+    width: 42%;
+    position: absolute;
+    top: 1.8%;
+    right: 2%;
+}
+
+#brookerBar>#brookerContributions {
+    height: 45.6%;
+    width: auto;
+    position: absolute;
+    bottom: 21%;
+    right: 29.8%;
+}
+
+#brookerBar>#descriptionContainter {
+    position: absolute;
+    width: 24%;
+    bottom: 24%;
+    right: 73%;
+    font-size: .95vw;
+}
+
+#brookerBar>#brookerDescription {
+    height: 45.6%;
+    width: auto;
+    position: absolute;
+    bottom: 21%;
+    left: 3%;
+}
+
+#brookerDescriptionTitle {
+    text-align: right;
+    font-family: deckerBolder;
+    font-size: 1.2vw;
+}
+
+#brookerDescriptionBody {
+    text-align: right;
+}
+
+#brookerBar>#contributionContainter {
+    position: absolute;
+    width: 34%;
+    bottom: 36%;
+    left: 32%;
+    font-size: .95vw;
+}
+
+#brookerContributionTitle{
+    text-align: left;
+    font-family: deckerBolder;
+    font-size: 1.2vw;
+}
+
+#brookerContributionBody{
+    text-align: left;
+    font-size: 0.75vw;
+}
+
+#brookerLearnMoreBar {
+    position: absolute;
+    bottom: 1%;
+    left: 2.5%;
+
+    height: 20%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#brookerLearnMoreBar>img {
+    display: block;
+    height: 70%;
+    width: auto;
+}
+
+#brookerLearnMoreBar>#learnMoreBrooker {
+    padding-left: 1vw;
+    height: 75%;
+}
